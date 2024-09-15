@@ -74,7 +74,7 @@ class StarterSeeder extends Seeder
 
         EmployeeSalary::create([
             'employee_id' => 1,
-            'currency' => 'USD',
+            'currency' => 'NPR',
             'salary' => 10000,
             'start_date' => now()->format('Y-m-d'),
             'end_date' => null,

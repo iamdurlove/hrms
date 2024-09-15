@@ -93,7 +93,7 @@ class DatabaseSeeder extends Seeder
                 'end_date' => null,
             ]);
 
-            $currencies = ['USD', 'EGP', 'SAR', 'EUR', 'GBP'];
+            $currencies = ['NPR'];
             EmployeeSalary::create([
                 'employee_id' => $employee->id,
                 'currency' => $currencies[array_rand($currencies)],

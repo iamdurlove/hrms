@@ -23,7 +23,7 @@ const toggleDark = useToggle(isDark);
 const locales = {
     // LOCALE: [Full Name for Front-End in Native Language, Country Flag Code],
     en: ['English','us'],
-    ar: ['العربية', 'arab'],
+    // ar: ['العربية', 'arab'],
 };
 
 function changeLanguage(locale){

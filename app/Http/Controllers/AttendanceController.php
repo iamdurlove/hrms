@@ -51,7 +51,8 @@ class AttendanceController extends Controller
             $date = '';
         }
 
-        $attendanceList = Attendance::select('date',
+        $attendanceList = Attendance::select(
+            'date',
             DB::raw('COUNT(CASE WHEN status IN (\'late\', \'on_time\') THEN 1 END) as attended_count'),
             DB::raw('COUNT(CASE WHEN status = \'on_time\' THEN 1 END) as on_time_count'),
             DB::raw('COUNT(CASE WHEN status = \'late\' THEN 1 END) as late_count'),
@@ -143,5 +144,4 @@ class AttendanceController extends Controller
     {
         return $this->attendanceServices->selfSignOffAttendance($request);
     }
-
 }
