@@ -4,7 +4,7 @@ namespace App\Services;
 
 
 use App\Mail\RequestStatusUpdated;
-use Arr;
+use Illuminate\Support\Arr;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Inertia\Inertia;
@@ -42,6 +42,4 @@ class RequestServices
         // Send Email to Employee informing them of the status update.
         Mail::to($empReq->employee->email)->send(new RequestStatusUpdated($empReq));
     }
-
-
 }
